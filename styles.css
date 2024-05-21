@@ -32,10 +32,13 @@
     font-size: var(--def-font-size);
   }
   body {
-    line-height: 1.5;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    line-height: 1.3;
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: var(--fw-500);
-  
+    background: var(--Light-grayish-blue);
     -webkit-font-smoothing: antialiased;
   }
   
@@ -60,3 +63,147 @@
   h1 {
     line-height: 1.1;
   }
+
+  /* Typography*/
+  .profile-name{
+    font: 500 13px/1 'Barlow Semi Condensed',sans-serif;
+    opacity: 0.7;
+  }
+  .profile-title{
+    font: 500 11px/1 'Barlow Semi Condensed', sans-serif;
+    opacity: 0.5;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight:var(--fw-600);
+  }
+
+  .body{
+    font-weight: 400;
+    opacity: 0.7;
+  }
+
+
+
+ /* card colors*/
+ .purple-card{
+    color: var(--white);
+    background-color: var(--violet);
+    grid-column: span 2;
+    position: relative;
+    z-index: 1;
+ }
+ .quote{
+    content: url(./images/bg-pattern-quotation.svg);
+    position: absolute;
+    right: 75px;
+    top: 0;
+    z-index: -1;
+ }
+
+ .blue-card{
+    color: var(--white);
+    background-color: var(--grayish-blue);
+ }
+
+ .white-1,
+ .white-2 {
+   color: var(--black);
+   background: linear-gradient(360deg, #f1f1f7 0%, #FFFFFF 100%);
+   /* background-color: var(--white); */
+ }
+ .white-1{
+    grid-row: span 2;
+ }
+
+ .black-card{
+    color: var(--white);
+    background-color: var(--blackish-blue);
+    grid-column: span 2;
+ }
+ 
+
+  .container {
+    margin-inline: 40px;
+  }
+  .grid-layout{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1110px;
+    margin: 40px;
+    row-gap: 24px;
+    column-gap: 30px;
+
+  }
+
+  /* Cards*/
+  .card{
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.247378);
+  }
+  .profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-block-end: 1.6rem;
+  }
+  .profile-info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .profile img{
+    max-width: 2.2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .testimonials .heading{
+    padding-bottom:1.4rem ;
+  }
+
+ /* mobile breakpoint*/
+ @media (max-width: 800px) {
+    .container {
+      margin-inline: 24px;
+    }
+  
+    .grid-layout {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  
+  .profile,
+  .profile img,
+  .card,
+  .quote {
+    -webkit-animation: slideIn 1s ease-in;
+    animation: slideIn 1s ease-out;
+  }
+
+  
+  
+
+  /* animation*/
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: translateX(-20px);
+      transform: translateX(-20px);
+      opacity: 0;
+      transition: transform 0.2s ease-in,opacity 0.2s ease-in;
+    }
+  
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateX(0px);
+      opacity: 1;
+      transition: transform 0.2s ease-in, opacity 0.2s ease-in;
+    }
+
+   
+  }
+  
