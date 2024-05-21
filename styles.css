@@ -1,0 +1,62 @@
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+  
+    /* Color*/
+    --violet: hsl(263, 55%, 52%);
+    --grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+  
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+  
+    --name-opacity: 0.5;
+    --reviews-opacity: 0.7;
+  
+    --def-font-size: 0.813rem;
+    --fw-500: 500;
+    --fw-600: 600;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  html {
+    font-size: var(--def-font-size);
+  }
+  body {
+    line-height: 1.5;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: var(--fw-500);
+  
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  h1 {
+    line-height: 1.1;
+  }
