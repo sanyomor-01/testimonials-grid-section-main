@@ -199,6 +199,7 @@
     }
   
     .grid-layout {
+    margin-block: 30px;
       display: flex;
       flex-direction: column;
     }
