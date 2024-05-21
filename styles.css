@@ -60,9 +60,7 @@
   h6 {
     overflow-wrap: break-word;
   }
-  h1 {
-    line-height: 1.1;
-  }
+
 
   /* Typography*/
   .profile-name{
@@ -75,6 +73,7 @@
   }
 
   .heading {
+    font-family: "Barlow Semi Condensed", sans-serif;
     font-size: 1.5rem;
     font-weight:var(--fw-600);
   }
@@ -113,6 +112,8 @@
    background: linear-gradient(360deg, #f1f1f7 0%, #FFFFFF 100%);
    /* background-color: var(--white); */
  }
+
+
  .white-1{
     grid-row: span 2;
  }
@@ -135,6 +136,18 @@
     row-gap: 24px;
     column-gap: 30px;
 
+  }
+  .border {
+    border: 2px solid hsla(264, 82%, 70%, 1);
+  }
+  
+  .border-purple {
+    border: 3px solid #9e61ff;
+  }
+  
+  
+  .border-gray {
+    border: 3px solid rgb(179, 179, 179);
   }
 
   /* Cards*/
@@ -164,6 +177,19 @@
     padding-bottom:1.4rem ;
   }
 
+  /*hover */
+
+  @media (hover:hover) {
+    .card:hover {
+      transform: scale(1.02);
+      filter: saturate(1.3);
+      box-shadow: 40px 60px 50px -47px rgba(26, 33, 45, 0.5);
+      transition: transform 0.3s ease-in, filter 0.3s ease-in, box-shadow 0.3s ease-in;
+    }
+
+  }
+ 
+
  /* mobile breakpoint*/
  @media (max-width: 800px) {
     .container {
@@ -185,7 +211,7 @@
     animation: slideIn 1s ease-out;
   }
 
-  
+
   
 
   /* animation*/
